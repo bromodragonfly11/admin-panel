@@ -20,7 +20,11 @@ Route::get('/', function () {
 
 
 Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function (){
-        Route::get('/', [MainController::class, 'index']);
+    Route::get('/', [MainController::class, 'index']);
+
+    Route::get('/employees', function (){
+        return view('admin.employees.index');
+    });
 });
 
 Auth::routes();

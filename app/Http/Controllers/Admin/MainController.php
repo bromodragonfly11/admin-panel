@@ -13,6 +13,6 @@ class MainController extends BaseController
 
     public function index()
     {
-        return 11;
+        return view('admin.index');
     }
 }
